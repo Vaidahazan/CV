@@ -1,0 +1,75 @@
+*{    /*Selectam toate etichetele*/
+  box-sizing: border-box;      /*Pentru calculul continut+border+margini*/
+  font-family: 'Roboto', sans-serif;
+
+}
+body {
+    margin:0;
+    display:flex;           /*Se va reflecta aranjamentele in elementele copii*/
+    flex-direction: row;    /*Afisam elementele pe randuri(orizontala)*/
+    flex-wrap:wrap           /*realizarea trecerea elementlor pe un singur rand*/
+}
+.container-stanga{
+    width:30%;
+    background-color: aqua;
+    padding:30px;  /*toate laturile au 30px*/
+    border-right:2px solid  rgb(16, 66, 65);     /*2px:grosimea,solid:tipul, ultima:culoare*/
+}
+.container-dreapta{
+    width:70%;
+    padding:30px;
+}
+.imagine-persoana{
+    border-radius:50%;
+    border:2px solid rgb(16, 66, 65);
+    display:block;  /*se intinde pe tot widht-ul disponibil*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;    /*scris mai simplu :margin:30px:auto*/
+
+}
+h1{
+    color:rgb(16, 66, 65);
+    text-transform :uppercase;  /*transforma textul cu litere mari*/
+}
+h3{
+    border-bottom: 2px solid rgb(16, 66, 65); /*specificam grosimea ,tipul,culoare (la bordura)*/
+}
+ul{
+    padding-left:10px;
+}
+h4, p {    /*toate h4 si toate paragrafele sunt selectate prin virgula*/
+    margin-top: 5px;
+    margin-bottom:5px;
+
+}
+.buton-mai-mult{
+    font-weight: bold; /*fac textul boltat*/
+    display:inline-block;   /*avem nevoie de display sa umblam la padding si margini*/
+    padding:5px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor:pointer;
+}
+.sectiune{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.element-ascuns{
+    display:none;
+}
+
+/*Responsiveness-----la sf fisierului css*/
+@media screen and( max-width:709px){         /*Interval 0-709*/
+    .container-stanga {
+        width:100%;
+        border-right: none; /*stregem bordura din dreapta*/
+        border-bottom: 2px solid rgb(16, 66, 65);
+    }
+
+    .container-dreapta{
+        width:100%;
+    }
+
+}
